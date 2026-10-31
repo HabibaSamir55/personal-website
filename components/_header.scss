@@ -1,0 +1,103 @@
+header {
+  padding: 3rem 0;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  z-index: 1;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-background);
+  height: 100%;
+  width: 100vw;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  top: 0;
+  z-index: -1;
+}
+
+.header .navigation-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation-link:link,
+.navigation-link:visited {
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.navigation-link:hover,
+.navigation-link:active {
+  text-decoration: underline;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.navigation {
+  transition: var(--transition-timing);
+}
+
+.container:has(#bio:target) .navigation-bio,
+.container:has(#skills:target) .navigation-skills,
+.container:has(#media:target) .navigation-media,
+.container:has(#clients:target) .navigation-clients,
+.container:has(#projects:target) .navigation-projects,
+.container:has(#contact:target) .navigation-contact {
+  color: red;
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
+.burger-menu__checkbox {
+  display: none;
+}
+
+/* toggle start */
+.toggle {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.toggle-title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+}
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  position: relative;
+  background-color: var(--color-black);
+  border-radius: 1.5rem;
+  height: 2.2rem;
+  width: 4.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  transition: var(--transition-timing);
+}
+
+.toggle-label::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-white);
+  transition: var(--transition-timing);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: var(--color-white);
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+  background-color: var(--color-green);
+  transform: translateX(2.1rem);
+}
+/* toggle end */
