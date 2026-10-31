@@ -61,7 +61,7 @@
   }
 
   header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
-    transform: translateY(5px) rotate(40deg);
+    transform: translateY(8px) rotate(40deg);
   }
 
   header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
@@ -69,7 +69,7 @@
     visibility: hidden;
   }
   header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3) {
-    transform: translateY(-6px) rotate(-40deg);
+    transform: translateY(-7px) rotate(-40deg);
   }
   .header {
     padding: 0;
